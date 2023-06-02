@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <title>Weather App</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="weather-app">
+        <form class="search-form" id="form-id">
+          <div class="row">
+            <div class="col-4">
+              <input
+                type="search"
+                id="city-search"
+                placeholder="Type a city.."
+                autofocus="on"
+                autocomplete="off"
+                class="form-control shadow-sm"
+              />
+            </div>
+            <div class="col-4">
+              <div class="input-group">
+                <input
+                  type="submit"
+                  value="Search"
+                  class="form-control btn btn-primary shadow-sm"
+                />
+                <button
+                  id="current-temp"
+                  class="form-control btn-success btn btn-secondary shadow-sm ml-3"
+                >
+                  Current
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+
+        <h1 id="currentCity">City Name</h1>
+        <ul>
+          <li id="timeNow">Wednesday 22:00</li>
+          <li id="description">Partly Cloudy</li>
+        </ul>
+        <div class="row">
+          <div class="col-6">
+            <div class="clearfix">
+              <!--<img
+                src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+                alt="Cloudy icon"
+                class="weather-icon float-left"
+              />-->
+              <div class="float-left">
+                <a id="tempNow" class="temperature">19</a>
+                <span class="units">
+                  <a id="celsius-temp">°C</a>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="col-8">
+            <ul>
+              <li>Humidity: <span id="humidity">77</span>%</li>
+              <li>Wind: <span id="wind">8</span>km/h</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="author">
+        <a href="https://github.com/matthieua/sup">Open-source code</a> by Mercy
+        Cherop
+      </div>
+    </div>
+
+    <script src="src/index.js"></script>
+  </body>
+</html>
